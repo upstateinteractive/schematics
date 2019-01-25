@@ -1,0 +1,73 @@
+<div class="register-container alternative">
+	<div class="row">
+		<form [formGroup]="form">
+			<mat-card>
+				<div class="header">
+						<mat-card-title>Register</mat-card-title>
+				</div>
+					<mat-card-content>
+						<div style="text-align: center; font-size: 12px;">
+								<p>Already have an account? <span style="font-weight: bold; font-style: italic; cursor: pointer;" routerLink="../login">Log in</span></p>
+						</div>
+						<mat-form-field>
+							<input matInput placeholder="Title (optional)" formControlName="title" type="text">
+						</mat-form-field>
+						<mat-form-field>
+							<input matInput placeholder="First Name" formControlName="firstname" type="text">
+						</mat-form-field>
+						<div class="invalid" *ngIf="form.get('firstname').invalid && (form.get('firstname').dirty || form.get('firstname').touched)">
+							*First name is required
+						</div>
+						<mat-form-field>
+							<input matInput placeholder="Last Name" formControlName="lastname" type="text">
+						</mat-form-field>
+						<div class="invalid" *ngIf="form.get('lastname').invalid && (form.get('lastname').dirty || form.get('lastname').touched)">
+							*Last name is required
+						</div>
+						<mat-form-field>
+							<input matInput placeholder="Company" formControlName="company" type="text">
+						</mat-form-field>
+						<div class="invalid" *ngIf="form.get('company').invalid && (form.get('company').dirty || form.get('company').touched)">
+								*Company is required
+							</div>
+						<mat-form-field>
+							<input 
+							matInput 
+							placeholder="Primary phone number" 
+							pattern="^\s*(?:\+?(\d{1,3}))?[- (]*(\d{3})[- )]*(\d{3})[- ]*(\d{4})(?: *[x/#]{1}(\d+))?\s*$"
+							formControlName="primary" 
+							type="tel">
+						</mat-form-field>
+						<div class="invalid" *ngIf="form.get('primary').invalid && (form.get('primary').dirty || form.get('primary').touched)">
+								*Please enter a valid phone number
+						</div>
+						<mat-form-field>
+							<input matInput placeholder="Secondary phone number (optional)" formControlName="secondary" type="tel">
+						</mat-form-field>
+						<mat-form-field>
+							<input matInput placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+" formControlName="email" type="email">
+						</mat-form-field>
+						<div class="invalid" *ngIf="form.get('email').invalid && (form.get('email').dirty || form.get('email').touched)">
+								*Please enter a valid email
+						</div>
+						<mat-form-field>
+								<input matInput placeholder="Password" formControlName="password" type="password">
+						</mat-form-field>
+						<div class="invalid" *ngIf="form.get('password').invalid && (form.get('password').dirty || form.get('password').touched)">
+								*Please enter a password
+						</div>
+					</mat-card-content>
+					<div class="button-row">
+							<button mat-raised-button color="primary" (click)="registerButton(form.value)">Register</button>
+					</div>
+				</mat-card>
+				<div class="invalid submit-error" *ngIf="hasError">
+					{{ errorMessage }}
+				</div>
+				<div *ngIf="isLoading"  class="loading-indicator">
+					<mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+			</div>
+		</form>
+	</div>
+	
+</div>

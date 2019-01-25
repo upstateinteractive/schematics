@@ -1,0 +1,11 @@
+
+.auth-heading {
+    padding-top: 50px;
+    text-align: center;
+    margin-bottom: 0px !important;
+  }
+
+  .auth-heading img {
+      margin: 20px;
+      width: 160px;
+  }

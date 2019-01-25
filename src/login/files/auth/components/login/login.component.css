@@ -1,0 +1,28 @@
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row {
+    align-self: center;
+  }
+
+  .mat-card-title {
+    text-align: left;
+  }
+  
+  mat-card-actions {
+      display: flex;
+  }
+
+  .button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  button {
+   text-transform: uppercase;
+  }

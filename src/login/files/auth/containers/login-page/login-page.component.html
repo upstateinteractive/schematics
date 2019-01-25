@@ -1,0 +1,14 @@
+
+<div class="auth-heading">
+    <img src="../../../../assets/TruWeatherLogo.png" alt="">
+</div>
+<tws-login 
+    [hasError]="hasError$ | async" 
+    [errorMessage]="errorMessage$ | async"
+    [isLoading]="isLoading$ | async" 
+    (login)="onLogin($event)"
+>
+</tws-login>
+
+
+
