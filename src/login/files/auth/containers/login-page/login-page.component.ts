@@ -12,7 +12,7 @@ import { CMSActions } from '../../../services/dispatcher.service';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
-  selector: 'tws-login-page',
+  selector: 'ui-login-page',
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.css']
 })

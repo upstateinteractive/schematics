@@ -11,7 +11,7 @@ import { CMSActions } from '../../../services/dispatcher.service';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
-  selector: 'tws-register-page',
+  selector: 'ui-register-page',
   templateUrl: './register-page.component.html',
   styleUrls: ['./register-page.component.css']
 })

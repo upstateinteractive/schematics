@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import * as fromRoot from '../../../reducers';
 
 @Component({
-  selector: 'tws-register',
+  selector: 'ui-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })

@@ -6,7 +6,7 @@ import * as fromRoot from '../../../reducers';
 import { errorMessage } from '../../../reducers/user/user.reducer';
 
 @Component({
-  selector: 'tws-login',
+  selector: 'ui-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
