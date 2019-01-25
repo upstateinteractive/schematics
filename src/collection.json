@@ -4,6 +4,10 @@
     "schematics": {
       "description": "A blank schematic.",
       "factory": "./schematics/index#schematics"
+    },
+    "login": {
+      "description": "A login component.",
+      "factory": "./login/index#login"
     }
   }
 }
