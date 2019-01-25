@@ -1,11 +1,6 @@
-
-<div class="auth-heading"> 
-    <img src="../../../../assets/TruWeatherLogo.png" alt="">
+<div class="auth-heading">
+  <img src="../../../../assets/TruWeatherLogo.png" alt="">
 </div>
-<ui-register 
-    [isLoading]="isLoading$ | async" 
-    [hasError]="hasError$ | async" 
-    [errorMessage]="errorMessage$ | async"
-    (register)="onRegister($event)"
->
+<ui-register [isLoading]="isLoading$ | async" [hasError]="hasError$ | async" [errorMessage]="errorMessage$ | async"
+  (register)="onRegister($event)">
 </ui-register>

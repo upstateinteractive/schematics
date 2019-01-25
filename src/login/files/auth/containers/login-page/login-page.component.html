@@ -1,14 +1,6 @@
-
 <div class="auth-heading">
-    <img src="../../../../assets/TruWeatherLogo.png" alt="">
+  <img src="../../../../assets/TruWeatherLogo.png" alt="">
 </div>
-<ui-login 
-    [hasError]="hasError$ | async" 
-    [errorMessage]="errorMessage$ | async"
-    [isLoading]="isLoading$ | async" 
-    (login)="onLogin($event)"
->
+<ui-login [hasError]="hasError$ | async" [errorMessage]="errorMessage$ | async" [isLoading]="isLoading$ | async"
+  (login)="onLogin($event)">
 </ui-login>
-
-
-
