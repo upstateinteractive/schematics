@@ -1,4 +1,4 @@
-import { Rule, SchematicContext, Tree, apply, url, template, branchAndMerge, mergeWith } from '@angular-devkit/schematics';
+import { Rule, SchematicContext, Tree, apply, url, template, branchAndMerge, mergeWith, move } from '@angular-devkit/schematics';
 import { strings } from '@angular-devkit/core';
 
 // You don't have to export the function as default. You can also have more than one rule factory
@@ -13,7 +13,9 @@ export function login(_options: any): Rule {
         template({
           ...strings,
           ..._options,
-        })]
+        }),
+        move('./src')
+      ]
     );
 
     return branchAndMerge(mergeWith(templateSource))(tree, _context);
