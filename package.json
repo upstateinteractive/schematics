@@ -1,6 +1,6 @@
 {
   "name": "@upstate/schematics",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Upstate Interactive's Schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
