@@ -6,7 +6,6 @@ import { strings } from '@angular-devkit/core';
 export function login(_options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
 
-
     const templateSource = apply(
       url('./files'),
       [
@@ -14,7 +13,7 @@ export function login(_options: any): Rule {
           ...strings,
           ..._options,
         }),
-        move('./src')
+        move('./src/app')
       ]
     );
 
