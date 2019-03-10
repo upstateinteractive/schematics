@@ -2,17 +2,9 @@
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "extends": ["@schematics/angular"],
   "schematics": {
-    "schematics": {
-      "description": "A blank schematic.",
-      "factory": "./schematics/index#schematics"
-    },
-    "login": {
-      "description": "A login component.",
-      "factory": "./login/index#login"
-    },
-    "routing": {
-      "description": "Modifies The 'app-routing' module to lazy-load the auth module.",
-      "factory": "./app-routing/index#default_1"
+    "auth": {
+      "description": "An auth module.",
+      "factory": "./auth/index#auth"
     }
   }
 }
