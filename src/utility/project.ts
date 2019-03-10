@@ -31,6 +31,12 @@ export function getProject<TProjectType extends ProjectType = ProjectType.Applic
   const workspace = isWorkspaceSchema(workspaceOrHost)
     ? workspaceOrHost
     : getWorkspace(workspaceOrHost);
+    if (!projectName) {
+      projectName =
+          workspace.defaultProject !== undefined
+          ? workspace.defaultProject
+          : Object.keys(workspace.projects)[0];
+    }
 
   return workspace.projects[projectName] as WorkspaceProject<TProjectType>;
 }

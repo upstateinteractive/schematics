@@ -73,9 +73,6 @@ function buildSelector(options: any, projectPrefix: any) {
 
 export function lazyLoadRoute(options: any) {
     return (host: any) => {
-        if (!options.project) {
-            throw new schematics.SchematicsException('Option (project) is required.');
-        }
         const _project = project.getProject(host, options.project);
         if (options.path === undefined) {
             options.path = project.buildDefaultPath(_project);
