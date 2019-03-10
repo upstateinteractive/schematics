@@ -9,6 +9,10 @@
     "login": {
       "description": "A login component.",
       "factory": "./login/index#login"
+    },
+    "routing": {
+      "description": "Modifies The 'app-routing' module to lazy-load the auth module.",
+      "factory": "./app-routing/index#default_1"
     }
   }
 }
