@@ -1,28 +1,12 @@
-# Getting Started With Schematics
+# @upstate/schematics
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+## Introduction
+Schematics are for the strong. 
 
-### Testing
+## Usage
+`npm i -S @upstate/schematics`  
+`ng g @upstate/schematics:auth --project <PROJECT_NAME>`
 
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
-
-Check the documentation with
-```bash
-schematics --help
-```
-
-### Unit Testing
-
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
-
-To publish, simply do:
-
-```bash
-npm run build
-npm publish
-```
-
-That's it!
- 
+## Options
+1. **--project** (required): the project to include
+2. **--routes** (options): use when there are already routes in `app-routing.module`
